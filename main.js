@@ -139,3 +139,16 @@
   });
   frame.addEventListener('pointerleave', function () { lens.target = 0; queue(); });
 })();
+
+/* ---------- Résumé QR code (encodes the PDF's absolute URL, so it works on any domain) ---------- */
+(function () {
+  if (typeof qrcode !== 'function') return;
+  Array.prototype.forEach.call(document.querySelectorAll('[data-qr]'), function (el) {
+    var qr = qrcode(0, 'M');
+    qr.addData(new URL(el.dataset.qr, location.href).href);
+    qr.make();
+    el.innerHTML = qr.createSvgTag({ cellSize: 4, margin: 0, scalable: true });
+    var svg = el.querySelector('svg');
+    if (svg) svg.setAttribute('aria-hidden', 'true');
+  });
+})();

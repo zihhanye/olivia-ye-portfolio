@@ -34,4 +34,4 @@ Every push to `main` redeploys the site.
 
 ## Still to fill in
 
-On the Contact page, the email address and résumé link are placeholders (shown with a dashed underline). The footer also carries a draft note to remove once the content is confirmed.
+On the Contact page, the email address is a placeholder (shown with a dashed underline). The résumé is `Olivia-Ye-Resume.pdf`; replace that file to update it, and the QR code (drawn by `qrcode.js`) follows automatically. The footer also carries a draft note to remove once the content is confirmed.
