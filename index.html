@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Olivia Ye Portfolio</title>
+<meta name="description" content="Olivia Ye, MS Business Analytics student at UCLA Anderson. Selected work, experience and contact.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300..700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>
+(function () {
+  var root = document.documentElement;
+  root.classList.add('js');
+  var page = location.hash.replace('#', '');
+  var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!calm && (page === '' || page === 'home')) root.classList.add('intro-play');
+})();
+</script>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <nav class="top" aria-label="Pages">
+      <a class="name" href="#home">Olivia Ye</a>
+      <ul>
+        <li><a href="#work" data-nav="work">Work</a></li>
+        <li><a href="#experience" data-nav="experience">Experience</a></li>
+        <li><a href="#about" data-nav="about">About</a></li>
+        <li><a href="#contact" data-nav="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================= Home ================= -->
+    <div class="page" data-page="home">
+      <div class="hero">
+        <div class="hero-text">
+          <p class="status">Open to work</p>
+          <h1 tabindex="-1">I turn operations and finance data into decisions a team can act on.</h1>
+          <p class="lede">I'm Olivia, an MS Business Analytics student at UCLA Anderson. I've automated financial reporting in Python, built Tableau dashboards for finance and manufacturing teams, and founded a cross-border e-commerce company.</p>
+        </div>
+        <figure class="portrait" id="portrait">
+          <div class="portrait-frame">
+            <img src="olivia.jpg" width="430" height="538" alt="Olivia Ye, smiling, in front of a columned campus building">
+            <canvas aria-hidden="true"></canvas>
+          </div>
+          <figcaption>Olivia Ye, Los Angeles<span>Move over the photo to read it as data points.</span></figcaption>
+        </figure>
+      </div>
+
+      <dl class="facts">
+        <div><dt>Program</dt><dd>MS Business Analytics, UCLA Anderson</dd></div>
+        <div><dt>Graduating</dt><dd>December 2026</dd></div>
+        <div><dt>Based in</dt><dd>Los Angeles, California</dd></div>
+        <div><dt>Works in</dt><dd>Python, SQL, R, Tableau</dd></div>
+      </dl>
+
+      <section class="sec">
+        <h2>Selected work</h2>
+        <div class="sec-body">
+          <ul class="teasers">
+            <li><a href="#work"><b>AI multi-agent logistics decision system</b><span>Escalation compliance up from 78% to 100% in simulation</span></a></li>
+            <li><a href="#work"><b>NYC taxi demand and weather pipeline</b><span>Spark ETL into a Snowflake star schema and a Tableau dashboard</span></a></li>
+            <li><a href="#work"><b>Marker Motion strategy simulation</b><span>Ranked 1st among all teams in the class</span></a></li>
+          </ul>
+          <p class="more"><a href="#work">See all three projects</a></p>
+        </div>
+      </section>
+
+      <section class="sec">
+        <h2>Most recent role</h2>
+        <div class="sec-body">
+          <ul class="teasers">
+            <li><a href="#experience"><b>Founder and Data Analytics Lead, Mona Flora</b><span>Cross-border e-commerce between the U.S. and China, since May 2024</span></a></li>
+          </ul>
+          <p class="more"><a href="#experience">See all experience</a></p>
+        </div>
+      </section>
+    </div>
+
+    <!-- ================= Work ================= -->
+    <div class="page" data-page="work">
+      <div class="page-head">
+        <h1 tabindex="-1">Selected work</h1>
+        <p class="lede">Three projects from the MS Business Analytics program, each with the result it produced.</p>
+      </div>
+      <div class="block">
+        <article class="proj">
+          <div class="proj-text">
+            <h2>AI multi-agent logistics decision system</h2>
+            <p class="when">March to May 2026</p>
+            <p>A LangGraph system that plans time-critical medicine shipments along the I-95 corridor. Separate agents clean shipment data, calculate KPIs, plan resources, run what&#8209;if simulations, audit for policy violations and write the report. A person approves the key steps.</p>
+            <p class="note">I added an audit agent that detects policy violations and triggers corrective action. The chart shows what changed in simulation once it was in place.</p>
+            <ul class="tags"><li>LangGraph</li><li>AI agents</li><li>Generative AI</li><li>LLMs</li></ul>
+          </div>
+          <figure class="fig" aria-label="Simulated on-time delivery rose from 91.4% to 93.2% and escalation compliance rose from 78% to 100% after the audit agent was added.">
+            <figcaption>Simulated results, before and after the audit agent</figcaption>
+            <div class="key" aria-hidden="true"><span><i class="b"></i>Before</span><span><i class="a"></i>After</span></div>
+            <div class="plot">
+              <div>
+                <p class="row-name">On-time delivery</p>
+                <div class="track" style="--from:91.4; --to:93.2">
+                  <span class="span"></span>
+                  <span class="dot b" style="--v:91.4"><b>91.4%</b></span>
+                  <span class="dot a" style="--v:93.2"><b>93.2%</b></span>
+                </div>
+              </div>
+              <div>
+                <p class="row-name">Escalation compliance</p>
+                <div class="track" style="--from:78; --to:100">
+                  <span class="span"></span>
+                  <span class="dot b" style="--v:78"><b>78%</b></span>
+                  <span class="dot a" style="--v:100"><b>100%</b></span>
+                </div>
+              </div>
+              <div class="axis" aria-hidden="true"><span style="--v:75">75%</span><span style="--v:100">100%</span></div>
+            </div>
+            <div class="fig-foot">
+              <p><b>96%</b>of test violations detected</p>
+              <p><b>20 of 20</b>test scenarios sent to a person at the right moment</p>
+            </div>
+          </figure>
+        </article>
+
+        <article class="proj">
+          <div class="proj-text">
+            <h2>NYC taxi demand and weather pipeline</h2>
+            <p class="when">March to May 2026</p>
+            <p>An end-to-end pipeline that joins New York taxi trips with NOAA weather records, built to show how weather moves demand across locations.</p>
+            <ul class="tags"><li>Apache Spark</li><li>ETL</li><li>Snowflake</li><li>Tableau</li><li>Data engineering</li></ul>
+          </div>
+          <figure class="fig">
+            <figcaption>How the data moves</figcaption>
+            <ol class="steps">
+              <li><b>Taxi trips and NOAA weather</b>Two raw public sources</li>
+              <li><b>Spark ETL</b>Cleans and joins both, adds time and weather features</li>
+              <li><b>Snowflake star schema</b>Fact and dimension tables for fast, flexible queries</li>
+              <li><b>Tableau dashboard</b>Filters and drill-downs by weather and location</li>
+            </ol>
+          </figure>
+        </article>
+
+        <article class="proj">
+          <div class="proj-text">
+            <h2>Marker Motion strategy simulation</h2>
+            <p class="when">January to March 2026</p>
+            <p>Led a cross-functional team through the Harvard Business Publishing Marker Motion simulation, making decisions each quarter from changing market and financial data.</p>
+            <p class="note">I built the team's framework for customer segmentation, competitive pricing and profitability, and we finished with the highest cumulative performance.</p>
+            <ul class="tags"><li>Business strategy</li><li>Customer analysis</li><li>Market analysis</li><li>Financial analysis</li></ul>
+          </div>
+          <figure class="fig">
+            <figcaption>Final standing</figcaption>
+            <p class="rank"><b>1st</b><span>among all teams<br>in the class</span></p>
+            <ul class="levers" aria-label="Decisions the team managed"><li>Pricing</li><li>Marketing investment</li><li>Sales allocation</li><li>Product development</li></ul>
+          </figure>
+        </article>
+      </div>
+    </div>
+
+    <!-- ================= Experience ================= -->
+    <div class="page" data-page="experience">
+      <div class="page-head">
+        <h1 tabindex="-1">Experience</h1>
+        <p class="lede">Six roles across analytics, finance and supply chain, most recent first.</p>
+      </div>
+      <div class="block">
+        <ol class="jobs">
+          <li>
+            <p class="when">May 2024 to now</p>
+            <div>
+              <h2>Founder and Data Analytics Lead <span class="org">at Mona Flora</span></h2>
+              <p>Founded a cross-border e-commerce company that connects U.S. and Chinese markets through Haikou's Free Trade Port. I lead the analytics: market data, customer demand and product opportunities in Python, SQL and Tableau, plus planning for changes in trade policy.</p>
+            </div>
+          </li>
+          <li>
+            <p class="when">June to August 2024</p>
+            <div>
+              <h2>Financial Data Analyst Intern <span class="org">at Hainan Xinhao Accounting Services</span></h2>
+              <p>Wrote Python scripts that process client financial data, <strong>cutting manual effort by 25%</strong>. Built revenue and expense forecasts with pandas, NumPy and scikit-learn, and Tableau dashboards that contributed to an <strong>average 17% reduction in operating expenses</strong> for key clients.</p>
+            </div>
+          </li>
+          <li>
+            <p class="when">December 2023 to January 2024</p>
+            <div>
+              <h2>Business Analytics Intern <span class="org">at DIALEV New Energy</span></h2>
+              <p>Analyzed production and sales data in Excel and Tableau, leading to a <strong>10% reduction in production delays</strong>. Built a Tableau dashboard with other departments that gave senior management real-time performance metrics.</p>
+            </div>
+          </li>
+          <li>
+            <p class="when">July to August 2023</p>
+            <div>
+              <h2>Finance Trainee <span class="org">at Hilton Hotels &amp; Resorts</span></h2>
+              <p>Kept daily financial records, processed tax returns and compiled the monthly reports presented to senior management.</p>
+            </div>
+          </li>
+          <li>
+            <p class="when">February to March 2021</p>
+            <div>
+              <h2>Supply Chain Management Intern <span class="org">at Duo Duo Maicai</span></h2>
+              <p>Reported on customer behavior and order volume to improve inventory planning, contributing to a <strong>5% increase in delivery efficiency</strong>.</p>
+            </div>
+          </li>
+          <li>
+            <p class="when">June to August 2020</p>
+            <div>
+              <h2>Finance Intern <span class="org">at Guangfa Securities</span></h2>
+              <p>Helped the sales manager draft management presentations of financial analysis and research, and ran client events from preparation to follow-up.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- ================= About ================= -->
+    <div class="page" data-page="about">
+      <div class="page-head">
+        <h1 tabindex="-1">About</h1>
+        <p class="lede">I studied economics at UNC Chapel Hill and accounting at UMass Amherst before starting the MS Business Analytics program at UCLA Anderson in 2025. I work in Chinese and English.</p>
+      </div>
+      <section class="sec">
+        <h2>Background</h2>
+        <div class="sec-body trio">
+          <div>
+            <h3>Education</h3>
+            <ul>
+              <li><b>UCLA Anderson School of Management</b><span>MS Business Analytics, 2025 to 2026</span></li>
+              <li><b>University of North Carolina at Chapel Hill</b><span>Bachelor's degree, Economics, 2023 to 2025</span></li>
+              <li><b>University of Massachusetts Amherst</b><span>BBA, Accounting, from 2021</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Toolkit</h3>
+            <ul>
+              <li><b>Analysis</b><span>Python (pandas, NumPy, scikit-learn), SQL, R, Excel</span></li>
+              <li><b>Visualization</b><span>Tableau dashboards, data storytelling</span></li>
+              <li><b>Data engineering</b><span>Apache Spark, ETL, Snowflake</span></li>
+              <li><b>AI</b><span>LangGraph, LLM agents</span></li>
+              <li><b>Languages</b><span>Chinese (native), English (professional)</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Certificates</h3>
+            <ul>
+              <li><b>Microsoft Excel Expert</b><span>Cengage, 2022</span></li>
+              <li><b>Tableau Specialist</b><span>The Career Accelerator, 2024</span></li>
+              <li><b>Website audience analysis for Grammy.com</b><span>Recording Academy project, 2024</span></li>
+              <li><b>Data analysis for sustainability</b><span>Intel project, 2024</span></li>
+              <li><b>Salesforce Trailhead</b><span>Trailhead by Salesforce</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="sec">
+        <h2>Community</h2>
+        <div class="sec-body duo">
+          <div>
+            <h3>Lions Club International</h3>
+            <p class="when">Member, District 308 B2, since May 2023</p>
+            <p>Supports schooling for children in underprivileged areas, joins beach cleanups and tree planting, and helped raise over $5,000 for disability care and elderly services.</p>
+          </div>
+          <div>
+            <h3>Chinese Student and Scholar Association</h3>
+            <p class="when">UMass Amherst, 2021 to 2023</p>
+            <p>Secretary of the Cultural Events Committee. Ran logistics, communications and budgets for events including a Chinese New Year celebration with more than 500 attendees.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ================= Contact ================= -->
+    <div class="page" data-page="contact">
+      <div class="page-head">
+        <h1 tabindex="-1">Open to roles in data analytics, AI and product.</h1>
+        <p class="lede">Based in Los Angeles and open to on-site, hybrid or remote work.</p>
+      </div>
+      <div class="block">
+        <dl class="reach">
+          <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/zihanye-1128olivia/" target="_blank" rel="noopener">linkedin.com/in/zihanye-1128olivia</a></dd></div>
+          <div><dt>Email</dt><dd><span class="todo">Add email address</span></dd></div>
+          <div><dt>Résumé</dt><dd><span class="todo">Add a one-page PDF</span></dd></div>
+        </dl>
+      </div>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <span>Olivia Ye, 2026</span>
+    <span>Draft. All details come from her LinkedIn profile. Dashed items still need her input.</span>
+  </footer>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
